@@ -15,8 +15,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         News people = new News();
-       people.id='i';
+        people.id = 'i';
         people.save();
+        People people1 = new People();
         List<News> list = new Select().from(News.class).queryList();
         for (int i = 0; i < list.size(); i++) {
             Toast.makeText(this, list.size(), Toast.LENGTH_SHORT).show();
